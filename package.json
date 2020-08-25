@@ -1,0 +1,24 @@
+{
+  "name": "nodejs_learnable_crashcource",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OkoyeApps/nodejs_learnable_crashcource.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OkoyeApps/nodejs_learnable_crashcource/issues"
+  },
+  "homepage": "https://github.com/OkoyeApps/nodejs_learnable_crashcource#readme"
+}
