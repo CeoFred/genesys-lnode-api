@@ -41,7 +41,7 @@ const httpServer = http.createServer((req, res) => {
             payload: parsedPayload
         };
 
-        const chosenHandler = typeof (router[trimedPath]) !== 'undefined' ? router[trimedPath] : router.notfound;
+        const chosenHandler =  routeHandler.resolve;
         //use the chosen handler to handle the request
         chosenHandler(data, (statusCode, result) => {
 
@@ -56,7 +56,6 @@ const httpServer = http.createServer((req, res) => {
             res.write(responseObj);
             res.end();
 
-            console.log(`the url visited was, ${trimedPath} and the method is ${method}`);
         });
     });
 });
@@ -65,11 +64,5 @@ const httpServer = http.createServer((req, res) => {
 httpServer.listen(8080, () => {
     console.log("server is listening on port 8080");
 });
-
-const router = {
-    ping : routeHandler.ping,
-    books : routeHandler.Books,
-    notfound : routeHandler.notfound
-}
 
 
