@@ -1,5 +1,5 @@
-#How to get started
+# How to get started
 
-npm i -g nodemon
+- npm i -g nodemon
 
-npm start
+- npm start
