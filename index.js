@@ -31,7 +31,6 @@ const httpServer = http.createServer((req, res) => {
 
         const parsedPayload = buffer.length ? JSON.parse(buffer) : {};
         
-        console.log(parsedPayload);
         req.body = parsedPayload;
         const data = {
             trimedPath: trimedPath,
@@ -41,9 +40,8 @@ const httpServer = http.createServer((req, res) => {
             payload: parsedPayload
         };
 
-        const chosenHandler =  routeHandler.resolve;
         //use the chosen handler to handle the request
-        chosenHandler(data, (statusCode, result) => {
+        routeHandler.resolve(data, (statusCode, result) => {
 
             statusCode = typeof (statusCode) === 'number' ? statusCode : 200;
             result = typeof (res) === 'object' ? result : {};
